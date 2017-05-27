@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+    <head>
+        <title>CHURVANIMANGA</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+		<div class = "header">
+			<div id = "left" class = "title"> 
+				<a id = "title"> ChurvaniManga </a> 
+			</div>
+			<div>
+				<ul class = "links">
+				  <li id ="nav"><a href="/index">HOME</a></li>
+				  <li id ="nav"><a href="/anime">ANIME</a></li>
+				  <li id ="nav"><a class = "active" href="#">MANGA</a></li>
+				  
+				</ul>
+				<img id = "logo" src = "logo.png">
+			</div>
+			<div class = "clearfix"></div>
+		</div>
+
+		<div>
+			<p class = "subhead">Manga</p>
+			<div  id = "anime" class="table animanga">
+							<table>
+								<tr>
+									<!--
+									<td><img id = "manga" class = "link" src = "horimiya.jpg"></td>
+									<td><img id = "manga" class = "link" src = "kimi ni todoke.jpg"></td>
+									<td><img id = "manga" class = "link" src = "koe no katachi.jpg"></td>
+									<td><img id = "manga" class = "link" src = "maid-sama.jpg"></td>
+									<td><img id = "manga" class = "link" src = "nisekoi.jpg"></td>
+									<td><img id = "manga" class = "link" src = "noragami.jpg"></td>
+									<td><img id = "manga" class = "link" src = "ouran koukou host club.jpg"></td>
+									-->
+									{% for card in cards %}
+										
+										<td><img id = "anime" class = "link" src = "{{card.image}}"></td> 
+										{% if loop.index % 4 == 0 %}
+											</tr>
+											<tr>
+										{%endif%}
+									
+										
+									{% endfor %}
+								</tr>
+							<!--	<tr>
+									<td><img id = "manga" class = "link" src = "shingeki.jpg"></td>
+									<td><img id = "manga" class = "link" src = "skipbeat.jpg"></td>
+									<td><img id = "manga" class = "link" src = "deathnote.jpg"></td>
+									<td><img id = "manga" class = "link" src = "cowboy.jpg"></td>
+									<td><img id = "manga" class = "link" src = "psychopass.jpg"></td>
+									<td><img id = "manga" class = "link" src = "angelbeats.jpg"></td>
+									<td><img id = "manga" class = "link" src = "deathnote.jpg"></td>
+								</tr>
+								<tr>
+									<td><img id = "manga" class = "link" src = "cowboy.jpg"></td>
+									<td><img id = "manga" class = "link" src = "psychopass.jpg"></td>
+									<td><img id = "manga" class = "link" src = "angelbeats.jpg"></td>
+									<td><img id = "manga" class = "link" src = "deathnote.jpg"></td>
+									<td><img id = "manga" class = "link" src = "cowboy.jpg"></td>
+									<td><img id = "manga" class = "link" src = "serialexp.jpg"></td>
+									<td><img id = "manga" class = "link" src = "fullmetal.jpg"></td>
+								</tr> -->
+							</table>
+						
+			</div>
+			
+		</div>
+	</body>
+</html>
